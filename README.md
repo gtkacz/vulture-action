@@ -11,7 +11,7 @@ This GitHub Action runs [Vulture](https://github.com/jendrikseipp/vulture), a to
 
 ## Usage
 
-To use this action in your workflow, create a `.github/workflows/vulture.yml` file in your repository with the following content:
+To use this action in your workflow, include the `gtkacz/vulture-action` action on one of your GitHub workflow. The file may look like the following:
 
 ```yaml
 name: Vulture Dead Code Check
@@ -33,7 +33,7 @@ jobs:
 
 This action accepts three inputs:
 
-- `src`: Source to run vulture. Default: '.'.
+- `src`: Source to run vulture. Default: `.`.
 - `args`: Arguments passed to Vulture. Use `vulture --help` to see available options or refer to the [Vulture documentation](https://github.com/jendrikseipp/vulture#usage).
 - `version`: The version of vulture to use, e.g. "==2.11.0"
 
