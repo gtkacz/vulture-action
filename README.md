@@ -11,7 +11,7 @@ This GitHub Action runs [Vulture](https://github.com/jendrikseipp/vulture), a to
 
 ## Usage
 
-To use this action in your workflow, include the `gtkacz/vulture-action` action on one of your GitHub workflow. The file may look like the following:
+To use this action in your workflow, include the `gtkacz/vulture-action` action on one of your GitHub workflow yml files. The file may look like the following:
 
 ```yaml
 name: Vulture Dead Code Check
