@@ -1,0 +1,34 @@
+name: "Vulture GitHub Action"
+description: "A GitHub Action of Vulture, a tool for finding dead Python code."
+author: "Gabriel Mitelman Tkacz"
+inputs:
+  args:
+    description: "Arguments passed to Vulture. Use `vulture --help` to see available options."
+    required: false
+  src:
+    description: "Source to run vulture. Default: '.'"
+    required: false
+    default: "."
+  version:
+    description: 'The version of vulture to use, e.g. "==2.11.0"'
+    required: false
+    default: ""
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install Vulture
+      shell: bash
+      run: pip install vulture${{ inputs.version }}
+
+    - name: Run Vulture
+      shell: bash
+      run: vulture ${{ inputs.src }} ${{ inputs.args }}
+
+branding:
+  icon: 'search'
+  color: 'gray-dark'
