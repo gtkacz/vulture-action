@@ -24,18 +24,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run Vulture
-      uses: gtkacz/vulture-action@v1
+      uses: gtkacz/vulture-action@1.0.0
       with:
         args: '. --min-confidence 70 --exclude "tests,docs" --verbose'
 ```
 
 ## Inputs
 
-This action accepts a single input:
+This action accepts three inputs:
 
-- `args`: Command line arguments to pass to Vulture (required, default: '.')
-
-You can use any valid Vulture CLI arguments in this input. For a full list of available options, refer to the [Vulture documentation](https://github.com/jendrikseipp/vulture#usage).
+- `src`: Source to run vulture. Default: '.'.
+- `args`: Arguments passed to Vulture. Use `vulture --help` to see available options or refer to the [Vulture documentation](https://github.com/jendrikseipp/vulture#usage).
+- `version`: The version of vulture to use, e.g. "==2.11.0"
 
 ## Examples
 
@@ -45,7 +45,7 @@ Scan the entire repository with default settings:
 
 ```yaml
 - name: Run Vulture
-  uses: gtkacz/vulture-action@v1
+  uses: gtkacz/vulture-action@1.0.0
 ```
 
 ### Custom Configuration
@@ -54,7 +54,7 @@ Scan with a minimum confidence of 80%, excluding specific directories, and using
 
 ```yaml
 - name: Run Vulture
-  uses: gtkacz/vulture-action@v1
+  uses: gtkacz/vulture-action@1.0.0
   with:
     args: '. --min-confidence 80 --exclude "tests,docs,build" --verbose'
 ```
@@ -67,7 +67,7 @@ Scan only the `src` directory:
 - name: Run Vulture
   uses: gtkacz/vulture-action@v1
   with:
-    args: 'src'
+    src: 'src'
 ```
 
 ### Using a Configuration File
@@ -76,14 +76,10 @@ If you have a `vulture_config.py` file in your repository:
 
 ```yaml
 - name: Run Vulture
-  uses: gtkacz/vulture-action@v1
+  uses: gtkacz/vulture-action@1.0.0
   with:
-    args: '. --make-whitelist vulture_config.py'
+    args: '--make-whitelist vulture_config.py'
 ```
-
-## Customizing the Action
-
-You can customize the action by modifying the `action.yml` file. The current implementation allows for maximum flexibility, but you might want to add specific inputs or steps based on your project's needs.
 
 ## Contributing
 
