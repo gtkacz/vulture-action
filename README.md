@@ -4,10 +4,10 @@ This GitHub Action runs [Vulture](https://github.com/jendrikseipp/vulture), a to
 
 ## Features
 
-- Easy integration with GitHub workflows
-- Flexible configuration using Vulture's CLI arguments
-- Supports all Vulture options and features
-- Customizable for different project structures and requirements
+- Easy integration with GitHub workflows.
+- Flexible configuration using Vulture's CLI arguments.
+- Supports all Vulture options and features.
+- Customizable for different project structures and requirements.
 
 ## Usage
 
@@ -35,7 +35,7 @@ This action accepts three inputs:
 
 - `src`: Source to run vulture. Default: `.`.
 - `args`: Arguments passed to Vulture. Use `vulture --help` to see available options or refer to the [Vulture documentation](https://github.com/jendrikseipp/vulture#usage).
-- `version`: The version of vulture to use, e.g. "==2.11.0"
+- `version`: The version of Vulture to use, e.g. `==2.11.0`. Default is null.
 
 ## Examples
 
