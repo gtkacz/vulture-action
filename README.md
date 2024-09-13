@@ -56,7 +56,7 @@ Scan with a minimum confidence of 80%, excluding specific directories, and using
 - name: Run Vulture
   uses: gtkacz/vulture-action@1.0.0
   with:
-    args: '. --min-confidence 80 --exclude "tests,docs,build" --verbose'
+    args: '--min-confidence 80 --exclude "tests,docs,build" --verbose'
 ```
 
 ### Scanning Specific Files or Directories
@@ -67,18 +67,7 @@ Scan only the `src` directory:
 - name: Run Vulture
   uses: gtkacz/vulture-action@v1
   with:
-    src: 'src'
-```
-
-### Using a Configuration File
-
-If you have a `vulture_config.py` file in your repository:
-
-```yaml
-- name: Run Vulture
-  uses: gtkacz/vulture-action@1.0.0
-  with:
-    args: '--make-whitelist vulture_config.py'
+    src: 'package'
 ```
 
 ## Contributing
