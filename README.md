@@ -1,6 +1,6 @@
 # Vulture Dead Code Scanner GitHub Action
 
-This GitHub Action runs [Vulture](https://github.com/jendrikseipp/vulture), a tool for detecting and removing unused Python code, on your repository. It helps you identify and eliminate dead code, improving your project's maintainability and reducing its complexity.
+This GitHub Action runs [Vulture](https://github.com/jendrikseipp/vulture), a tool for detecting unused Python code, on your repository. It helps you identify and eliminate dead code, improving your project's maintainability and reducing its complexity.
 
 ## Features
 
