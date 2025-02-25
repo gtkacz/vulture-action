@@ -45,7 +45,7 @@ Scan the entire repository with default settings:
 
 ```yaml
 - name: Run Vulture
-  uses: gtkacz/vulture-action@1.0.0
+  uses: gtkacz/vulture-action@v1.0.0
 ```
 
 ### Custom Configuration
