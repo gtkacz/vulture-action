@@ -54,7 +54,7 @@ Scan with a minimum confidence of 80%, excluding specific directories, and using
 
 ```yaml
 - name: Run Vulture
-  uses: gtkacz/vulture-action@1.0.0
+  uses: gtkacz/vulture-action@v1.0.0
   with:
     args: '--min-confidence 80 --exclude "tests,docs,build" --verbose'
 ```
@@ -65,7 +65,7 @@ Scan only the `src` directory:
 
 ```yaml
 - name: Run Vulture
-  uses: gtkacz/vulture-action@v1
+  uses: gtkacz/vulture-action@v1.0.0
   with:
     src: 'package'
 ```
