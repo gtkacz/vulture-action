@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run Vulture
-      uses: gtkacz/vulture-action@1.0.0
+      uses: gtkacz/vulture-action@v1.0.0
       with:
         args: '. --min-confidence 70 --exclude "tests,docs" --verbose'
 ```
